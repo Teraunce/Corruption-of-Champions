@@ -3,7 +3,7 @@
 	import classes.GlobalFlags.kFLAGS;
 	import classes.GlobalFlags.kGAMECLASS;
 	import classes.Scenes.NPCs.*;
-
+	import classes.Player
 	import coc.view.MainView;
 
 	public class Camp extends NPCAwareContent{
@@ -1181,6 +1181,11 @@ public function doSleep(clrScreen:Boolean = true):void {
 		urtaPregs.preggoUrtaGivingBirth();
 		return;
 	}
+	if((kFLAGS.Maleherm_Flag==1) && (biggestTitSize() > 3))
+	{	
+		outputText("  Your inherent maleness slows your breast growth greatly, letting you keep your male shape.", false);
+		Player.shrinkTits();
+	}	
 	campQ = true;
 	if(timeQ == 0) {
 		if(model.time.hours == 21) timeQ = 9;
