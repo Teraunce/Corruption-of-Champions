@@ -377,7 +377,7 @@ package classes
 				"Your sensual attitude towards love and romance makes your tease ability slightly more effective.");
 		public static const Whispered:PerkType = mk("Whispered", "Whispered",
 				"Akbal's blessings grant limited telepathy that can induce fear.");
-				
+		public static const SmallTits:PerkType = mk("Flat-Chested", "Flat-Chested", "Reduces breast size gains by 100%", "You choose the 'Flat-chested' perk, making your body 100% more resistant to growing boobs, Making it very hard to look female.");		
 		public static const ControlledBreath:ControlledBreathPerk = new ControlledBreathPerk();
 		public static const CleansingPalm:CleansingPalmPerk = new CleansingPalmPerk();
 		public static const Enlightened:EnlightenedPerk = new EnlightenedPerk();
