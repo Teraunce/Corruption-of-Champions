@@ -457,7 +457,7 @@ use namespace kGAMECLASS;
 			{
 				if (gender == 0)
 					race = "lizan";
-				else if (gender == 1)
+				else if ((gender == 1) || ((gender == 3) && (mf("boy", "girl")=="boy")))
 					race = "male lizan";
 				else if (gender == 2)
 					race = "female lizan";
@@ -530,7 +530,7 @@ use namespace kGAMECLASS;
 				race = "bunny-" + mf("boy", "girl");
 			if (harpyScore() >= 4)
 			{
-				if (gender >= 2)
+				if ((gender == 2) || ((gender == 3) && (mf("boy", "girl")=="girl")))
 					race = "harpy";
 				else
 					race = "avian";
@@ -1515,6 +1515,11 @@ use namespace kGAMECLASS;
 					}
 				}
 			}
+			if((kFLAGS.Maleherm_Flag==1) && (biggestTitSize() > 3))
+        		{    
+        			outputText("  Your inherent maleness slows your breast growth greatly, letting you keep your male shape.", false);
+        			shrinkTits();
+        		}
 		}
 
 		//Determine minimum lust
